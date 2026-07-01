@@ -42,12 +42,18 @@ Para ejecutar este proyecto en tu entorno local, sigue estos pasos:
      composer install
 4. **Configurar el entorno**
     Copia el archivo "env" y renómbralo a ".env".
-    Configura las variables de entorno dentro del .env, especialmente los datos de conexión a la       base de datos:
+    Configura las variables de entorno dentro del .env, especialmente los datos de conexión a la base de datos:
+    
       CI_ENVIRONMENT = development
+      
       database.default.hostname = localhost
+      
       database.default.database = nombre_de_tu_bd
+
       database.default.username = root
+      
       database.default.password = 
+      
 5. **Ejecutar las migraciones y seeders (si aplica)**
     ->bash
      php spark migrate
@@ -60,9 +66,13 @@ Para ejecutar este proyecto en tu entorno local, sigue estos pasos:
 
 ## 📁 Estructura Principal del Proyecto
 Las áreas más relevantes del código se encuentran en:
+
   -app/Controllers/Admin/ - Controladores del panel de administración (Dashboard, Productos, Órdenes, Usuarios).
+  
   -app/Views/admin/ - Vistas y plantillas de la interfaz del administrador.
+  
   -app/Models/ - Modelos de acceso a la base de datos.
+  
   -app/Filters/ - Filtros de seguridad (ej. AdminFilter.php).
 
 ---
